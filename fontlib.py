@@ -123,8 +123,6 @@ class Char:
             if font_texture.shape[2] == 3: # needs alpha channel
                 font_texture = cv2.cvtColor(font_texture, cv2.COLOR_RGB2RGBA)
 
-            cv2.imwrite("tex.png", font_texture)
-
             for i in range(image.shape[0]):
                 for j in range(image.shape[1]):
                     if all(image[i][j] == bg_color):
